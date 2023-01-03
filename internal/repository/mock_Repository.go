@@ -14,8 +14,8 @@ type MockRepository struct {
 	mock.Mock
 }
 
-// GetUser provides a mock function with given fields: ctx, email
-func (_m *MockRepository) GetUser(ctx context.Context, email string) (*entity.User, error) {
+// GetUserByEmail provides a mock function with given fields: ctx, email
+func (_m *MockRepository) GetUserByEmail(ctx context.Context, email string) (*entity.User, error) {
 	ret := _m.Called(ctx, email)
 
 	var r0 *entity.User

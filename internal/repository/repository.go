@@ -12,7 +12,7 @@ import (
 //go:generate mockery --name=Repository --output=repository --inpackage
 type Repository interface {
 	SaveUser(ctx context.Context, email, name, password string) error
-	GetUser(ctx context.Context, email string) (*entity.User, error)
+	GetUserByEmail(ctx context.Context, email string) (*entity.User, error)
 }
 
 type repo struct {
